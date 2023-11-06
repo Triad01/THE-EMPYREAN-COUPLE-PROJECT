@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="containter">
+      <!-- section search -->
+      <section class="section">
+        <div class="section__search">
+          <input
+            class="section__search--input"
+            type="search"
+            placeholder="search"
+          />
+        </div>
+        <div class="section__select">
+          <label class="section__select--label" for="choose">Status</label>
+          <select class="section__select--choose" name="choose" id="choose">
+            <option value="choose" selected>Choose</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Processing">Processing</option>
+            <option value="Cancelled">Cancelled</option>
+            <option value="Shipped">Shipped</option>
+          </select>
+        </div>
+        <div class="section__button">
+          <button>Export</button>
+        </div>
+      </section>
+      <!-- section oders -->
+      <section class="section__orders">
+        <div class="section__heading">
+          <div>
+            <input type="checkbox" />
+            <p>Order ID</p>
+          </div>
+          <div>Billing Name</div>
+          <div>Date</div>
+          <div>Payment Status</div>
+          <div>Total</div>
+          <div>Payment Method</div>
+          <div>Order Status</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Paid</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Delivered</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Failed</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Processing</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Paid</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Shipped</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Failed</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Cancelled</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Paid</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Delivered</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Failed</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Processing</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Paid</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Shipped</div>
+        </div>
+        <div class="section__order">
+          <div>
+            <input type="checkbox" />
+            <p>#adfadaf</p>
+          </div>
+          <div>Brendan craig</div>
+          <div>oct 6 2024</div>
+          <div class="payment_status">Failed</div>
+          <div>$50</div>
+          <div>Credit card</div>
+          <div class="order_status">Cancelled</div>
+        </div>
+      </section>
+      <section class="page_count">
+        <p class="">Showing orders 1 to 10 of 112</p>
+        <div class="go-to_circles">
+          <div><<</div>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>>></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
