@@ -82,50 +82,37 @@ select {
   color: #000;
   font-weight: bold;
 }
-/* SECTION ORDERS (Heading) ======================================================================= */
 
-.section__heading {
-  display: flex;
-  background-color: rgba(122, 203, 206, 59%);
-  justify-content: space-between;
-  padding: 1rem;
+/* section oder (table layout) ======================*/
+table {
+  width: 100%;
+  /* border-spacing: 0; */
+  border-collapse: collapse;
   margin-top: 1rem;
 }
+.section__headings {
+  background-color: rgba(122, 203, 206, 59%);
+  height: 3rem;
+}
 
-.section__orders p,
-.section__order p {
+th {
+  text-align: start;
+  font-weight: 400;
+}
+.id_box {
+  margin-right: 10rem;
+  padding-left: 1rem;
+}
+
+.section__orders .order__id {
   display: inline;
   margin-left: 2rem;
 }
 
-/* SECTION ORDER --- (Order details) */
-.section__order {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
+.section__order--details {
   background-color: rgba(217, 217, 217, 50%);
   border: 1px solid rgba(216, 216, 216, 100%);
-}
-
-.section__order div {
-  text-align: center;
-  margin-left: 0rem;
-}
-
-.section__order > :nth-child(2) {
-  transform: translateX(-2rem);
-}
-.section__order > :nth-child(3) {
-  transform: translateX(-5rem);
-}
-.section__order > :nth-child(4) {
-  transform: translateX(-6rem);
-}
-.section__order > :nth-child(5) {
-  transform: translateX(-2rem);
-}
-.section__order > :nth-child(6) {
-  transform: translateX(-1.5rem);
+  height: 3rem;
 }
 
 /*  Page count ===================== */
@@ -134,6 +121,11 @@ select {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+.page_count + p {
+  padding-left: 0;
+  margin-left: 0;
 }
 .go-to_circles {
   display: flex;
@@ -152,51 +144,51 @@ select {
   margin-right: 0.5rem;
 }
 
-/* payment status colors */
+/* payment status colors =================================================== */
 
 .paid {
   color: #0eaa7b;
-  background-color: #7acbce;
+  /* background-color: #7acbce; */
   border-radius: 5px;
   padding: 0 0.5rem;
 }
 .failed {
   color: #f1556c;
-  background-color: #fce0e4;
+  /* background-color: #fce0e4; */
   border-radius: 5px;
   padding: 0 0.5rem;
 }
 .awaiting_authorization {
   color: #f8b84d;
-  background-color: #fcebd0;
+  /* background-color: #fcebd0; */
   border-radius: 5px;
   padding: 0 0.5rem;
 }
 
-/* Order status colors */
+/* Order status colors =======================================================*/
 .delivered {
-  background-color: #0eaa7b;
-  color: #fff;
+  /* background-color: #0eaa7b; */
+  color: #0eaa7b;
   border-radius: 5px;
   padding: 0 0.5rem;
 }
 .processing {
-  background-color: #f8b84d;
-  color: #fff;
+  /* background-color: #f8b84d; */
+  color: #f8b84d;
   border-radius: 5px;
   padding: 0 0.5rem;
 }
 
 .shipped {
-  background-color: #37cde6;
-  color: #fff;
+  /* background-color: #37cde6; */
+  color: #37cde6;
   border-radius: 5px;
   padding: 0 0.5rem;
 }
 
 .cancelled {
-  background-color: #f1556c;
-  color: #fff;
+  /* background-color: #f1556c; */
+  color: #f1556c;
   border-radius: 5px;
   padding: 0 0.5rem;
 }
