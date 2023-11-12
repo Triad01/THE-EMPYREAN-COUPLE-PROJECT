@@ -1,9 +1,6 @@
 "use strict";
-// DOM SELECTIONS ===================================
-const section__orders = document.querySelector(".section__orders");
-const section__headings = document.querySelector(".section__headings");
 
-const DUMMY_ORDERS = [
+let DUMMY_ORDERS = [
   {
     id: "#adaoif",
     name: "Brendan Criag",
@@ -78,6 +75,11 @@ const DUMMY_ORDERS = [
   },
 ];
 
+// DOM SELECTIONS ===================================
+const section__orders = document.querySelector(".section__orders");
+const section__headings = document.querySelector(".section__headings");
+const select__status = document.querySelector(".section__select--choose");
+
 DUMMY_ORDERS.forEach((order) => {
   section__headings.insertAdjacentHTML(
     "afterend",
@@ -125,3 +127,37 @@ order_status.forEach((status) => {
     status.classList.add("cancelled");
   }
 });
+
+//FILTER ORDERS ==============================================
+select__status.addEventListener("change", (e) => {
+  const value = e.target.value;
+
+  const filtered_orders = DUMMY_ORDERS.filter((order) => {
+    return order.order_status === value;
+  });
+
+  displayOrders(filtered_orders);
+});
+
+function displayOrders(orders) {
+  section__orders.innerHTML = "";
+  orders.forEach((order) => {
+    section__orders.insertAdjacentHTML(
+      "beforeend",
+      `<tr class="section__order--details">
+        <th>
+          <div class="id_box">
+            <input type="checkbox" />
+            <p class="order__id">${order.id}</p>
+          </div>
+        </th>
+        <th>${order.name}</th>
+        <th>${order.date}</th>
+        <th class="payment_status">${order.payment_status}</th>
+        <th>${order.total}</th>
+        <th>${order.payment_method}</th>
+        <th class="order_status">${order.order_status}</th>
+      </tr>`
+    );
+  });
+}
